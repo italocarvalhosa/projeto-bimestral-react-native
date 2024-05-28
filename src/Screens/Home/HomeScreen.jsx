@@ -7,25 +7,35 @@ const logo = '../../../assets/img/logo-sem-nome.png';
 export const HomeScreen = () => {
     return (
         <View style={styles.container}>
-            <Image
-                source={require(logo)}
-                style={styles.logo}
-            />
-            <HomeText/>
-            <ButtonNavigate page="SingIn" textButton="SingIn"/>
+
+            <View style={styles.imageDiv}>
+                <Image
+                    source={require(logo)}
+                    style={styles.logo}
+                />
+            </View>
+            <HomeText />
+            <ButtonNavigate page="Cadastro" textButton="Cadastrar" />
+            <ButtonNavigate page="Login" textButton="Login" />
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container : {
+    container: {
         flex: 1,
         alignItems: 'center',
+        justifyContent: 'flex-start',
+
+    },
+    imageDiv: {
+        height: '50%',
+        width: '100%',
         justifyContent: 'center',
-        
+        alignItems: 'center'
     },
     logo: {
-        width: 400,
+        width: 500,
         height: 350
     },
     botao: {
