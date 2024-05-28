@@ -25,6 +25,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts" : [
+            ["./assets/fonts/InterDisplay-ExtraLight.otf"], 
+            ["./assets/fonts/InterDisplay-Medium.otf"], 
+            ["./assets/fonts/InterDisplay-Light.otf"],
+            ["./assets/fonts/InterDisplay-Regular.otf"]
+          ]
+        }
+      ]
+    ]
   }
 }
