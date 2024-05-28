@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeStack } from './Home/HomeStack';
+import { ProfileStack } from './Profile/ProfileStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +38,7 @@ export function RootNavigation()
                 }
             >
                 <Tab.Screen name="Home" component={ HomeStack }/>
+                <Tab.Screen name="Perfil" component={ ProfileStack }/>
             </Tab.Navigator>
         </NavigationContainer>
     );
