@@ -2,9 +2,12 @@ import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { HomeText } from './HomeText';
 import { ButtonNavigate } from '../components/ButtonNavigate';
+
 const logo = '../../../assets/img/logo-sem-nome.png';
 
 export const HomeScreen = () => {
+
+
     return (
         <View style={styles.container}>
             <Image
