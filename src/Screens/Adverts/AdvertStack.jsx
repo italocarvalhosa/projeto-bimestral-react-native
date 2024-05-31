@@ -9,7 +9,7 @@ const AdvertStack = () => {
     return (
 
         <Stack.Navigator>
-            <Stack.Screen name="Anúncio" component={ AdvertScreen } />
+            <Stack.Screen name="Anúncios" component={ AdvertScreen } />
         </Stack.Navigator>
     );
 };
