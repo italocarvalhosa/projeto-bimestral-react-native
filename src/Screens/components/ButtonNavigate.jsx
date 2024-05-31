@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Text, Pressable, StyleSheet, View } from 'react-native';
+import { Inter_Regular } from '../../../assets/fonts/fonts';
 
 const ButtonNavigate = ({ page, textButton }) => {
     const navigation = useNavigation();
@@ -38,7 +39,7 @@ const styles = StyleSheet.create(
         },
         botaoText: {
             color: '#FFF',
-            fontFamily: 'Inter-Regular',
+            fontFamily: Inter_Regular,
             fontSize: 16
        }
     }
