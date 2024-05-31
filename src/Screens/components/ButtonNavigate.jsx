@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Text, Pressable, StyleSheet, View } from 'react-native';
+import { Inter_Regular } from '../../../assets/fonts/fonts';
 
 const ButtonNavigate = ({ page, textButton }) => {
     const navigation = useNavigation();
@@ -10,12 +11,12 @@ const ButtonNavigate = ({ page, textButton }) => {
     };
 
     return (
-        <View>
+        <View style={styles.container}>
             <Pressable
-                style={StyleSheet.botao}
+                style={styles.botao}
                 onPress={navigateToScreen}
             >
-                <Text style={StyleSheet.botaoText}>
+                <Text style={styles.botaoText}>
                     {textButton}
                 </Text>
             </Pressable>
@@ -25,16 +26,22 @@ const ButtonNavigate = ({ page, textButton }) => {
 
 const styles = StyleSheet.create(
     {
+        container:{
+            margin: 10
+        },
         botao: {
-            width: 150,
+            width: 100,
             height: 40,
             backgroundColor: '#89CEFF',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            borderRadius: 20
         },
         botaoText: {
-            color: '#FFF'
-        }
+            color: '#FFF',
+            fontFamily: Inter_Regular,
+            fontSize: 16
+       }
     }
 );
 

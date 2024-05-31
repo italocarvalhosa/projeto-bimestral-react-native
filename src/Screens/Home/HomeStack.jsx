@@ -1,7 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from './HomeScreen';
-import { HeaderButton } from './components/HeaderButton';
+import { HeaderButton } from '../components/HeaderButton';
 
 const Stack = createNativeStackNavigator();
 

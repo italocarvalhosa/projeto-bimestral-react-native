@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeStack } from './Home/HomeStack';
 import { ProfileStack } from './Profile/ProfileStack';
+import { AdvertStack } from './Adverts/AdvertStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,12 @@ export function RootNavigation()
                                 iconName = focused
                                 ? 'home'
                                 : 'home-outline'
-                            } else if (route.name === 'Perfil'){
+                            } else if(route.name == 'Anúncios'){
+                                iconName = focused
+                                ? 'clipboard'
+                                : 'clipboard-outline'
+                            }
+                            else if (route.name === 'Perfil'){
                                 iconName = focused
                                 ? 'person'
                                 : 'person-outline';
@@ -38,6 +44,7 @@ export function RootNavigation()
                 }
             >
                 <Tab.Screen name="Home" component={ HomeStack }/>
+                <Tab.Screen name="Anúncios" component={ AdvertStack } />
                 <Tab.Screen name="Perfil" component={ ProfileStack }/>
             </Tab.Navigator>
         </NavigationContainer>
