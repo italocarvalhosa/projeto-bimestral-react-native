@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { Inter_Medium } from '../../../../assets/fonts/fonts';
+import { Inter_Medium } from '../../../../../assets/fonts/fonts';
+import { CarouselImage } from './CarouselImage';
 
 const data = [
     {
@@ -28,20 +29,30 @@ const data = [
     },
   ];
 
-function CarouselCardItem({ item, index}){
+
+function CarouselImage1({ item, index }) {
     return (
         <View>
             <Image source={{
                 uri: item.imgUrl
-            }} 
-            style={styles.img}
-            resizeMode="stretch"
+            }}
+                style={styles.img}
+                resizeMode="stretch"
             />
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.body}>{item.body}</Text>
         </View>
     );
-}
+};
+
+
+
+function CarouselCardItem({ index }){
+    return (
+        <CarouselImage image={data.imgUrl} />
+    );
+};
+
 
 const { width } = Dimensions.get('window');
 
@@ -60,7 +71,7 @@ const CarouselPost = () => {
                 layoutCardOffset={9}
                 ref={isCarousel}
                 data={data}
-                renderItem={CarouselCardItem}
+                renderItem={CarouselImage1}
                 sliderWidth={390}
                 itemWidth={390}
                 inactiveSlideShift={0}

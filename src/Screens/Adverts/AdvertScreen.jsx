@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, useWindowDimensions, Animated, SafeAreaView, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, Image, useWindowDimensions, Animated, SafeAreaView, ImageBackground } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Inter_Light, Inter_Medium } from '../../../assets/fonts/fonts';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import { CarouselPost } from './components/CarouselPost';
+import { CarouselPost } from './components/Post/CarouselPost';
 
 let userProfile = '../../../assets/img/user-profile.jpg';
 
