@@ -21,16 +21,16 @@ export function RootNavigation()
                         tabBarIcon: ({focused, color, size}) => {
                             let iconName;
 
-                            if(route.name === 'Home'){
+                            if(route.name === 'HomeStack'){
                                 iconName = focused
                                 ? 'home'
                                 : 'home-outline'
-                            } else if(route.name == 'Anúncios'){
+                            } else if(route.name == 'AnúnciosStack'){
                                 iconName = focused
                                 ? 'clipboard'
                                 : 'clipboard-outline'
                             }
-                            else if (route.name === 'Perfil'){
+                            else if (route.name === 'PerfilStack'){
                                 iconName = focused
                                 ? 'person'
                                 : 'person-outline';
@@ -43,9 +43,9 @@ export function RootNavigation()
                     })
                 }
             >
-                <Tab.Screen name="Home" component={ HomeStack }/>
-                <Tab.Screen name="Anúncios" component={ AdvertStack } />
-                <Tab.Screen name="Perfil" component={ ProfileStack }/>
+                <Tab.Screen name="HomeStack" component={ HomeStack } options={{title: 'Home'}}/>
+                <Tab.Screen name="AnúnciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
+                <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}}/>
             </Tab.Navigator>
         </NavigationContainer>
     );

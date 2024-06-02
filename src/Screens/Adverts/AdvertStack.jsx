@@ -8,7 +8,9 @@ const Stack = createStackNavigator();
 const AdvertStack = () => {
     return (
 
-        <Stack.Navigator>
+        <Stack.Navigator
+            
+        >
             <Stack.Screen name="Anúncios" component={ AdvertScreen } />
         </Stack.Navigator>
     );
