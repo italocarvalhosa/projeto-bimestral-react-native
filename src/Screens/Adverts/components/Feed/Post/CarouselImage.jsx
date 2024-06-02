@@ -6,7 +6,7 @@ import {
     View,
     Text
 } from 'react-native';
-import { Inter_Medium } from '../../../../../assets/fonts/fonts';
+import { Inter_Medium } from '../../../../../../assets/fonts/fonts';
 
 const { width } = Dimensions.get('window');
 
