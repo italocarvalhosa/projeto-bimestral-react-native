@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     } 
 });
 
+// Componente que armazena o Post do usuário 
 export const Post = () => {
     return (
         <View style={styles.post}>

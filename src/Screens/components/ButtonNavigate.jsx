@@ -3,27 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Text, Pressable, StyleSheet, View } from 'react-native';
 import { Inter_Regular } from '../../../assets/fonts/fonts';
 
-const ButtonNavigate = ({ page, textButton }) => {
-    const navigation = useNavigation();
-
-    const navigateToScreen = () => {
-        navigation.navigate(page);
-    };
-
-    return (
-        <View style={styles.container}>
-            <Pressable
-                style={styles.botao}
-                onPress={navigateToScreen}
-            >
-                <Text style={styles.botaoText}>
-                    {textButton}
-                </Text>
-            </Pressable>
-        </View>
-    );
-}
-
+// estilização da página
 const styles = StyleSheet.create(
     {
         container:{
@@ -44,5 +24,33 @@ const styles = StyleSheet.create(
        }
     }
 );
+
+// page -> página destino.
+// textButton -> texto no botão de navegação.
+const ButtonNavigate = ({ page, textButton }) => {
+    // cria uma navigation -> metodo da classe `Native` para funções de navegação.
+    const navigation = useNavigation();
+
+    // função para navegação
+    const navigateToScreen = () => {
+    // navega entre as páginas
+        navigation.navigate(page);
+    };
+
+    return (
+        <View style={styles.container}>
+            <Pressable
+                style={styles.botao}
+                // aciona a função navigateScreen
+                // onPress={() => navigation.navigate(page)}
+                onPress={navigateToScreen}
+            >
+                <Text style={styles.botaoText}>
+                    {textButton}
+                </Text>
+            </Pressable>
+        </View>
+    );
+}
 
 export { ButtonNavigate };

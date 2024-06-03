@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     }
 });
 
+// Componente responsável pela criação do feed
 export const Feed = () => {
     return (
         <View style={styles.feed}>
