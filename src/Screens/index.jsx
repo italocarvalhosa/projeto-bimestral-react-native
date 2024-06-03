@@ -21,19 +21,23 @@ export function RootNavigation()
                         tabBarIcon: ({focused, color, size}) => {
                             let iconName;
 
-                            if(route.name === 'HomeStack'){
-                                iconName = focused
-                                ? 'home'
-                                : 'home-outline'
-                            } else if(route.name == 'AnúnciosStack'){
-                                iconName = focused
-                                ? 'clipboard'
-                                : 'clipboard-outline'
+                            const icon = (iconFocus, iconNotFocus) => {
+                                iconName = focused ? iconFocus : iconNotFocus;
                             }
-                            else if (route.name === 'PerfilStack'){
-                                iconName = focused
-                                ? 'person'
-                                : 'person-outline';
+
+                            switch(route.name)
+                            {
+                                case 'HomeStack':
+                                    icon('home', 'home-outline');
+                                    break;
+                                case 'AnunciosStack':
+                                    icon('clipboard', 'clipboard-outline');
+                                    break;
+                                case 'PerfilStack':
+                                    icon('person', 'person-outline');
+                                    break;
+                                default:
+                                    break;
                             }
                             return <Ionicons name={iconName} size={size} color={color} />
                         },
@@ -44,7 +48,7 @@ export function RootNavigation()
                 }
             >
                 <Tab.Screen name="HomeStack" component={ HomeStack } options={{title: 'Home'}}/>
-                <Tab.Screen name="AnúnciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
+                <Tab.Screen name="AnunciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
                 <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}}/>
             </Tab.Navigator>
         </NavigationContainer>
