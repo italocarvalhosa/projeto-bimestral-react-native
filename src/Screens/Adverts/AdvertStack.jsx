@@ -7,10 +7,8 @@ const Stack = createStackNavigator();
 
 const AdvertStack = () => {
     return (
-
-        <Stack.Navigator
-            
-        >
+        // Cria uma stack de navegação para a página de anúncios dos clientes
+        <Stack.Navigator>
             <Stack.Screen name="Anúncios" component={ AdvertScreen } />
         </Stack.Navigator>
     );
