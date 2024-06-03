@@ -7,7 +7,7 @@ import { Feed } from './components/Feed/Feed';
 const AdvertScreen = () => {
 
     return (
-        // View responsável por habilitar a rolagem da tela
+        // View responsável por habilitar a rolagem da tela.
         <ScrollView>
             <View style={styles.container}>
 
