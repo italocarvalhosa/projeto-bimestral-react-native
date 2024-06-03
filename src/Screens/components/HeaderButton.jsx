@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 });
 
 // Componente que renderiza um botão do lado direito da tela
-// page -> página para qual página vamos navegar
+// page -> página para a qual vamos navegar
 // text -> texto da página
 const HeaderButton = ({page, text}) => {
 
