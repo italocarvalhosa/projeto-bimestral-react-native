@@ -8,7 +8,12 @@ const Stack = createStackNavigator();
 const AdvertStack = () => {
     return (
         // Cria uma stack de navegação para a página de anúncios dos clientes
-        <Stack.Navigator>
+        <Stack.Navigator
+            initialRouteName='Anúncios'
+            screenOptions={{
+                headerLeft: false
+            }}
+        >
             <Stack.Screen name="Anúncios" component={ AdvertScreen } />
         </Stack.Navigator>
     );
