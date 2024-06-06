@@ -3,6 +3,7 @@ import { HomeNavigation } from './src/Screens';
 import * as Font from 'expo-font';
 import { useCallback, useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
+import { Index } from './src/Screens/initial';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -49,6 +50,6 @@ export default function App() {
   }
 
   return (
-    <HomeNavigation></HomeNavigation>
+    <Index></Index>
   );
 }

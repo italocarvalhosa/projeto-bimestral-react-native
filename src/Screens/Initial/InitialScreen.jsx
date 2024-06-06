@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Text, TextInput } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
 
 const logo = '../../../assets/img/logo-sem-nome.png';
@@ -18,21 +18,18 @@ const InitialScreen = () => {
             </View>
                 <Text>E-mail</Text>
                 <TextInput 
-                    onChangeText={email} 
                     placeholder="Digite aqui seu e-mail" 
                     inputMode="text" 
-                    value={email}
                     style={styles.input}
                 />
 
                 <Text>Senha</Text>
                 <TextInput 
-                    onChangeText={senha} 
                     placeholder="Digite aqui sua senha" 
                     inputMode="text"
-                    value={senha}
                     style={styles.input}
                 />
+                <ButtonNavigate page="HomeProfissional" textButton="Home" />
         </View>
     );
 }

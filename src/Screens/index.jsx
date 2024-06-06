@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 export function HomeNavigation()
 {
     return (
-        <NavigationContainer>
+        
             <Tab.Navigator
 
             initialRouteName='Home'
@@ -52,6 +52,6 @@ export function HomeNavigation()
                 <Tab.Screen name="AnunciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
                 <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}} />
             </Tab.Navigator>
-        </NavigationContainer>
+        
     );
 }
