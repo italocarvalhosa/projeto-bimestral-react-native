@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { RootNavigation } from './src/Screens';
+import { HomeNavigation } from './src/Screens';
 import * as Font from 'expo-font';
 import { useCallback, useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
@@ -49,6 +49,6 @@ export default function App() {
   }
 
   return (
-    <RootNavigation></RootNavigation>
+    <HomeNavigation></HomeNavigation>
   );
 }

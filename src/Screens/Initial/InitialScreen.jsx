@@ -4,7 +4,7 @@ import { ButtonNavigate } from '../components/ButtonNavigate';
 
 const logo = '../../../assets/img/logo-sem-nome.png';
 
-export const InitialScreen = () => {
+const InitialScreen = () => {
 
 
     return (
@@ -62,3 +62,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
 });
+
+export { InitialScreen };

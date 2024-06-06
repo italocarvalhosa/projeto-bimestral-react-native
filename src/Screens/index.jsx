@@ -8,13 +8,14 @@ import { AdvertStack } from './Adverts/AdvertStack';
 
 const Tab = createBottomTabNavigator();
 
-export function RootNavigation()
+export function HomeNavigation()
 {
     return (
         <NavigationContainer>
             <Tab.Navigator
-                initialRouteName="Home"
 
+            initialRouteName='Home'
+                
                 screenOptions={
                     ({route}) => ({
 
@@ -47,9 +48,9 @@ export function RootNavigation()
                     })
                 }
             >
-                <Tab.Screen name="HomeStack" component={ HomeStack } options={{title: 'Home'}}/>
+                <Tab.Screen name="HomeStack" component={ HomeStack } options={{title: 'Home'}} />
                 <Tab.Screen name="AnunciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
-                <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}}/>
+                <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}} />
             </Tab.Navigator>
         </NavigationContainer>
     );

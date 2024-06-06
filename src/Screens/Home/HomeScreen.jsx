@@ -20,7 +20,7 @@ export const HomeScreen = () => {
             </View>
             <HomeText />
             <ButtonNavigate page="Cadastro" textButton="Cadastrar" />
-            <Button style={styles.botao}title="Login" onPress={() => navigation.navigate('InitialScreen')}/>
+            <ButtonNavigate page="Initial" textButton="Tela inicial" />
         </View>
     );
 }

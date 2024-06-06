@@ -4,6 +4,7 @@ import { HomeScreen } from './HomeScreen';
 import { HeaderButton } from '../components/HeaderButton';
 import { ButtonNavigate } from '../components/ButtonNavigate';
 import { AboutScreen } from '../About/AboutScreen';
+import { InitialScreen } from '../Initial/InitialScreen';
 
 // função responsável por criar uma Stack de navegação
 const Stack = createNativeStackNavigator();
@@ -23,6 +24,7 @@ const HomeStack = () => {
                     )
                 }}
              />
+             <Stack.Screen name="Initial" component={ InitialScreen } />
              <Stack.Screen name="Sobre nós" component={AboutScreen} />
         </Stack.Navigator>
 
