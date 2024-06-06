@@ -1,12 +1,10 @@
 import React from 'react';
-import { View, Button, StyleSheet, Image, } from 'react-native';
-import { HomeText } from './HomeText';
+import { View, StyleSheet, Image } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 const logo = '../../../assets/img/logo-sem-nome.png';
 
-export const HomeScreen = () => {
+export const InitialScreen = () => {
 
 
     return (
@@ -18,9 +16,23 @@ export const HomeScreen = () => {
                     style={styles.logo}
                 />
             </View>
-            <HomeText />
-            <ButtonNavigate page="Cadastro" textButton="Cadastrar" />
-            <Button style={styles.botao}title="Login" onPress={() => navigation.navigate('InitialScreen')}/>
+                <Text>E-mail</Text>
+                <TextInput 
+                    onChangeText={email} 
+                    placeholder="Digite aqui seu e-mail" 
+                    inputMode="text" 
+                    value={email}
+                    style={styles.input}
+                />
+
+                <Text>Senha</Text>
+                <TextInput 
+                    onChangeText={senha} 
+                    placeholder="Digite aqui sua senha" 
+                    inputMode="text"
+                    value={senha}
+                    style={styles.input}
+                />
         </View>
     );
 }
@@ -42,14 +54,11 @@ const styles = StyleSheet.create({
         width: 500,
         height: 350
     },
-    botao: {
+    input: {
         width: 150,
         height: 40,
         backgroundColor: '#89CEFF',
         alignItems: 'center',
         justifyContent: 'center'
     },
-    botaoText: {
-        color: '#FFF'
-    }
 });
