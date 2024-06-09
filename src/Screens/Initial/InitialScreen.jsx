@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text, TextInput } from 'react-native';
+import { View, StyleSheet, Image, Text, TextInput, Button } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
 
 const logo = '../../../assets/img/logo-sem-nome.png';
@@ -29,7 +29,10 @@ const InitialScreen = () => {
                     inputMode="text"
                     style={styles.input}
                 />
-                <ButtonNavigate page="HomeProfissional" textButton="Home" />
+                <ButtonNavigate page="HomeProfissional" textButton="Entrar" />
+
+                <Text>Não possui cadastro?</Text>
+                <ButtonNavigate page="HomeProfissional" textButton="Cadastro" />
         </View>
     );
 }
@@ -56,8 +59,11 @@ const styles = StyleSheet.create({
         height: 40,
         backgroundColor: '#89CEFF',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        borderRadius: 5,
+        
     },
+    
 });
 
 export { InitialScreen };
