@@ -12,7 +12,7 @@ const styles = StyleSheet.create(
         botao: {
             width: 100,
             height: 40,
-            backgroundColor: '#89CEFF',
+            backgroundColor: '#2DC7E4',
             alignItems: 'center',
             justifyContent: 'center',
             borderRadius: 20
