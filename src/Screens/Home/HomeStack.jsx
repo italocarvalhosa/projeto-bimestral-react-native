@@ -22,6 +22,7 @@ const HomeStack = () => {
                         <HeaderButton page="Sobre nós" text="Alo Arthur" />
                     )
                 }}
+
              />
              <Stack.Screen name="Initial" component={ InitialScreen } />
              <Stack.Screen name="Sobre nós" component={ AboutScreen } />
