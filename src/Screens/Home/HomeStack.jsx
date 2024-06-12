@@ -19,7 +19,7 @@ const HomeStack = () => {
                     // Podemos retornar um texto, uma imagem ou qualquer outro elemento
                     headerRight: () => (
                         // retorna um botão que transita entre as telas
-                        <HeaderButton page="Sobre nós" text="Alo Arthur" />
+                        <HeaderButton page="Sobre nós" text="Sobre nós" />
                     )
                 }}
 
