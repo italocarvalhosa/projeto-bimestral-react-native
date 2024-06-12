@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Inter_Regular } from '../../../assets/fonts/fonts';
 import { HomeHeader } from './HomeHeader';
-import { InputSearch } from './components/InputSearch';
+import { InputSearch } from './InputSearch';
 import { HomeService } from './HomeService/HomeServices';
 import { TitleGuide } from './HomeGuide/TitleGuide';
 import { HomeGuide } from './HomeGuide/HomeGuide';
