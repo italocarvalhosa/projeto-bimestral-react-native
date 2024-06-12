@@ -3,12 +3,11 @@ import { View, StyleSheet, Image, Text, TextInput, Button } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
 import { Inter_Medium, Inter_Regular } from '../../../assets/fonts/fonts';
 
-
+const icon_email = '../../../assets/icons/email.svg';
+const icon_password = '../../../assets/icons/password.svg';
 const logo = '../../../assets/img/logo-sem-nome.png';
 
 const InitialScreen = () => {
-
-
     return (
         <View style={styles.container}>
 
@@ -19,26 +18,39 @@ const InitialScreen = () => {
                 />
                 <Text style={styles.title}>FoundCare</Text>
             </View>
+            <View>
+                <View style={styles.inputcontainer}>
+                    <Image style={styles.icon} source={require(icon_email)}/>
                     <TextInput 
                         placeholder="Digite aqui seu e-mail" 
                         inputMode="text" 
                         style={styles.input}
                     />
+                </View>
+                <View style={styles.inputcontainer}>
+                    <Image style={styles.icon} source={require(icon_password)}/>
                     <TextInput 
                         placeholder="Digite aqui sua senha" 
                         inputMode="text"
+                        secureTextEntry={true}
                         style={styles.input}
                     />
-                    <ButtonNavigate page="HomeProfissional" textButton="Entrar" />
+                </View>
+                <View style={styles.viewCenter}>
+                    <ButtonNavigate style={styles.input} page="HomeProfissional" textButton="Entrar" />
 
                     <Text>Não possui cadastro?</Text>
                     <ButtonNavigate style={styles.input} page="HomeProfissional" textButton="Cadastro" />
-                
+                </View>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+    viewCenter: {
+        alignItems: "center",
+    },
     container: {
         flex: 1,
         alignItems: 'center',
@@ -54,6 +66,15 @@ const styles = StyleSheet.create({
     logo: {
         width: 500,
         height: 350
+    },
+    inputcontainer:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    icon: {
+        marginRight: 10,
     },
     input: {
         width: 215,
@@ -76,7 +97,9 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontFamily: Inter_Medium
 
-    }
+    },
+
+
 
 });
 
