@@ -20,11 +20,13 @@ const InitialScreen = () => {
             </View>
             <View>
                 <View style={styles.inputcontainer}>
-                    <Image style={styles.icon} source={require(icon_email)}/>
                     <TextInput 
                         placeholder="Digite aqui seu e-mail" 
                         inputMode="text" 
                         style={styles.input}
+                        leftIcon={
+                            <Image style={styles.icon} source={require(icon_email)}/>
+                        }
                     />
                 </View>
                 <View style={styles.inputcontainer}>
