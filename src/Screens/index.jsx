@@ -6,6 +6,7 @@ import { HomeStack } from './Home/HomeStack';
 import { ProfileStack } from './Profile/ProfileStack';
 import { AdvertStack } from './Adverts/AdvertStack';
 
+
 const Tab = createBottomTabNavigator();
 
 export function HomeNavigation()

@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text, TextInput, Button } from 'react-native';
+import { View, StyleSheet, Image, Text, TextInput } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
-import { Inter_Medium, Inter_Regular } from '../../../assets/fonts/fonts';
+import { Inter_Medium } from '../../../assets/fonts/fonts';
 
 const icon_email = '../../../assets/icons/email.svg';
 const icon_password = '../../../assets/icons/password.svg';
@@ -10,7 +10,6 @@ const logo = '../../../assets/img/logo-sem-nome.png';
 const InitialScreen = () => {
     return (
         <View style={styles.container}>
-
             <View style={styles.imageDiv}>
                 <Image
                     source={require(logo)}
@@ -40,7 +39,7 @@ const InitialScreen = () => {
                     <ButtonNavigate style={styles.input} page="HomeProfissional" textButton="Entrar" />
 
                     <Text>Não possui cadastro?</Text>
-                    <ButtonNavigate style={styles.input} page="HomeProfissional" textButton="Cadastro" />
+                    <ButtonNavigate style={styles.input} page="CadastroCliente" textButton="Cadastro" />
                 </View>
             </View>
         </View>
@@ -55,7 +54,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'flex-start',
-
     },
     imageDiv: {
         height: '50%',
@@ -96,11 +94,7 @@ const styles = StyleSheet.create({
         color: '#2DC7E4',
         fontSize: 32,
         fontFamily: Inter_Medium
-
     },
-
-
-
 });
 
 export { InitialScreen };
