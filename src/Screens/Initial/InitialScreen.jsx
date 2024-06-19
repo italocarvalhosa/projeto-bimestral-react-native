@@ -45,6 +45,9 @@ const InitialScreen = () => {
                     <ButtonNavigate style={styles.button} page="HomeProfissional" textButton="Entrar" onPress={closeModal} />
 
                     <Text style={styles.text}>Não possui cadastro?</Text>
+                    <ButtonNavigate style={styles.button} page="CadastroCliente" textButton="Cadastro Paciente" />
+                    <ButtonNavigate style={styles.button} page ="CadastroEnfermeiro" textButton="Cadastro Enfermeiro" />
+                    
 
                     <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
                         <Text style={styles.text}>Cadastro</Text>
@@ -83,6 +86,7 @@ const InitialScreen = () => {
                             </View>
                         </TouchableWithoutFeedback>
                     </Modal>
+
 
                 </View>
             </View>
