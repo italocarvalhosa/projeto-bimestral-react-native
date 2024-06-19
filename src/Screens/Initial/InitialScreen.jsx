@@ -1,18 +1,24 @@
-import React from 'react';
-import { View, StyleSheet, Image, Text, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Image, Text, TextInput, TouchableOpacity, Modal, TouchableWithoutFeedback } from 'react-native';
 import { ButtonNavigate } from '../components/ButtonNavigate';
 import { Inter_Medium } from '../../../assets/fonts/fonts';
 
-const icon_email = require('../../../assets/icons/email.png');
-const icon_password = require('../../../assets/icons/password.png');
-const logo = '../../../assets/img/logo-sem-nome.png';
-
 const InitialScreen = () => {
+    const [modalVisible, setModalVisible] = useState(false);
+    const icon_email = require('../../../assets/icons/email.png');
+    const icon_password = require('../../../assets/icons/password.png');
+    const logo = require('../../../assets/img/logo-sem-nome.png');
+
+    const closeModal = () => {
+        setModalVisible(false);
+    };
+
+    console.log('Modal Visible:', modalVisible); 
     return (
-            <View style={styles.container}>
+        <View style={styles.container}>
             <View style={styles.imageDiv}>
                 <Image
-                    source={require(logo)}
+                    source={logo}
                     style={styles.logo}
                 />
                 <Text style={styles.title}>FoundCare</Text>
@@ -20,25 +26,64 @@ const InitialScreen = () => {
             <View>
                 <View style={styles.inputContainer}>
                     <Image style={styles.icon} source={icon_email} />
-                    <TextInput 
-                        placeholder="Digite aqui seu e-mail" 
-                        inputMode="text" 
+                    <TextInput
+                        placeholder="Digite aqui seu e-mail"
+                        inputMode="text"
                         style={styles.inputIcon}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <Image style={styles.icon} source={icon_password} />
-                    <TextInput 
-                        placeholder="Digite aqui sua senha" 
+                    <TextInput
+                        placeholder="Digite aqui sua senha"
                         inputMode="text"
                         secureTextEntry={true}
                         style={styles.inputIcon}
                     />
                 </View>
                 <View style={styles.viewCenter}>
-                    <ButtonNavigate style={styles.button} page="HomeProfissional" textButton="Entrar" />
+                    <ButtonNavigate style={styles.button} page="HomeProfissional" textButton="Entrar" onPress={closeModal} />
+
                     <Text style={styles.text}>Não possui cadastro?</Text>
-                    <ButtonNavigate style={styles.button} page="CadastroCliente" textButton="Cadastro" />
+
+                    <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
+                        <Text style={styles.text}>Cadastro</Text>
+                    </TouchableOpacity>
+
+                    <Modal
+                        animationType="slide"
+                        transparent={true}
+                        visible={modalVisible}
+                        onRequestClose={closeModal}
+                    >
+                        <TouchableWithoutFeedback onPress={closeModal}>
+                            <View style={styles.modalOverlay}>
+                                <View style={styles.modalContent}>
+                                    <Text>Como você deseja se cadastrar?</Text>
+                                    <ButtonNavigate
+                                        style={styles.navigateButton}
+                                        page="CadastroCliente"
+                                        textButton="Paciente"
+                                        onPress={() => {
+                                            closeModal();
+                                        }}
+                                    />
+                                    <ButtonNavigate
+                                        style={styles.navigateButton}
+                                        page="Cadastro"
+                                        textButton="Profissional"
+                                        onPress={() => {
+                                            closeModal();
+                                        }}
+                                    />
+                                    <TouchableOpacity onPress={closeModal}>
+                                        <Text>Fechar</Text>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+                        </TouchableWithoutFeedback>
+                    </Modal>
+
                 </View>
             </View>
         </View>
@@ -62,8 +107,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logo: {
-        width: 500,
-        height: 350,
+        width: 500, 
+        height: 350, 
     },
     inputContainer: {
         flexDirection: 'row',
@@ -80,15 +125,14 @@ const styles = StyleSheet.create({
     },
     inputIcon: {
         flex: 1,
-        height: 70,
-        width: 400,
+        height: 40,
         backgroundColor: '#2DC7E4',
         borderRadius: 5,
         textAlign: 'left',
         color: 'white',
         fontFamily: Inter_Medium,
         fontSize: 13,
-        paddingLeft: 40, 
+        paddingLeft: 40,
     },
     button: {
         marginVertical: 10,
@@ -107,6 +151,19 @@ const styles = StyleSheet.create({
         fontFamily: Inter_Medium,
         marginVertical: 20,
         textAlign: 'center',
+    },
+    modalOverlay: {
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    modalContent: {
+        width: '80%',
+        padding: 20,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        alignItems: 'center',
     },
 });
 
