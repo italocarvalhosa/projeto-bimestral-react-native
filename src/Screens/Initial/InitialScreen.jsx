@@ -38,7 +38,9 @@ const InitialScreen = () => {
                 <View style={styles.viewCenter}>
                     <ButtonNavigate style={styles.button} page="HomeProfissional" textButton="Entrar" />
                     <Text style={styles.text}>Não possui cadastro?</Text>
-                    <ButtonNavigate style={styles.button} page="CadastroCliente" textButton="Cadastro" />
+                    <ButtonNavigate style={styles.button} page="CadastroCliente" textButton="Cadastro Paciente" />
+                    <ButtonNavigate style={styles.button} page ="CadastroEnfermeiro" textButton="Cadastro Enfermeiro" />
+                    
                 </View>
             </View>
         </View>
