@@ -1,5 +1,18 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Image, Text, ScrollView, StyleSheet } from 'react-native';
+
+
+const arthur = '../../../assets/img/arthur.jpg';
+
+const ruan = '../../../assets/img/ruan.jpg';
+
+const matheus = '../../../assets/img/matheus.jpg';
+
+const geovana = '../../../assets/img/geovana.jpg';
+
+const italo = '../../../assets/img/italo.jpg';
+
+const joao = '../../../assets/img/joao.jpg';
 
 const AboutScreen = () => {
   return (
@@ -7,51 +20,54 @@ const AboutScreen = () => {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Criadores do App:</Text>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={arthur} style={styles.image} />
+         
           <View>
             <Text>Arthur:</Text>
-            <Text>19 anos, Estudande de desenvolvimento de sistemas:</Text>
+            <Text>20 anos, Estudande de desenvolvimento de sistemas:</Text>
           </View>
         </View>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={matheus} style={styles.image} />
           <View>
             <Text>Matheus</Text>
-            <Text>Estudande de desenvolvimento de sistemas</Text>
+            <Text> 25 anos, Estudande de desenvolvimento de sistemas</Text>
           </View>
         </View>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={geovana} style={styles.image} />
           <View>
             <Text>Geovana</Text>
-            <Text>Estudande de desenvolvimento de sistemas</Text>
+            <Text>20 anos, Estudande de desenvolvimento de sistemas</Text>
           </View>
         </View>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={joao} style={styles.image} />
           <View>
             <Text>João</Text>
-            <Text>Estudande de desenvolvimento de sistemas</Text>
+            <Text>22 anos, Estudande de desenvolvimento de sistemas</Text>
           </View>
         </View>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={italo} style={styles.image} />
           <View>
             <Text>Italo</Text>
-            <Text>Estudande de desenvolvimento de sistemas</Text>
+            <Text>22 anos, Estudande de desenvolvimento de sistemas</Text>
           </View>
         </View>
         <View style={styles.creator}>
-          <View style={styles.circle} />
+        <Image source={ruan} style={styles.image} />
           <View>
             <Text>Ruan</Text>
-            <Text>Estudande de desenvolvimento de sistemas</Text>
+            <Text>20 anos, Estudande de desenvolvimento de sistemas</Text>
           </View>
         </View>
       </View>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>História do App:</Text>
-        <Text>[História geral do app]</Text>
+        <Text>História do app: Nosso aplicativo foi criado em 2024 como projeto de TCC do curso de desenvolvimento de sistemas da Etec Juscelino Kubitschek. Desde o princípio, nossa ideia era fornecer uma plataforma de atendimento homecare para os usuários."</Text>
+
+        
       </View>
     </ScrollView>
   );
@@ -77,13 +93,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 10,
   },
-  circle: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: 'gray',
+  image: {
+    width: 50, // ajuste o tamanho da imagem conforme necessário
+    height: 50,
+    borderRadius: 30, // para fazer a imagem ser circular
     marginRight: 10,
-  },
+  }
+
 });
 
 export { AboutScreen };
+
+
