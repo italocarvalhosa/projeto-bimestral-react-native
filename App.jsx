@@ -1,9 +1,8 @@
 import 'react-native-gesture-handler';
-import { HomeNavigation } from './src/Screens';
 import * as Font from 'expo-font';
 import { useCallback, useEffect, useState } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { Index } from './src/Screens/initial';
+import { Index } from './src/Screens/Initial/InitialStack';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -11,7 +10,6 @@ export default function App() {
 
   const [appIsReady, setAppIsReady] = useState(false);
 
-  
 
   useEffect(() => {
 

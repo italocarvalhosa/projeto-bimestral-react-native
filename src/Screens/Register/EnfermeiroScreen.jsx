@@ -1,18 +1,23 @@
-
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Alert, Picker } from 'react-native';
 
-const ClienteScreen = () => {
+const EnfermeiroScreen = () => {
   const [nomeCompleto, setNomeCompleto] = useState('');
   const [idade, setIdade] = useState('');
   const [cpfRg, setCpfRg] = useState('');
   const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('')
+  const [crm, setCrm] = useState('');
+  const [numeroCoren, setNumeroCoren] = useState('');
+  const [validadeCoren, setValidadeCoren] = useState('');
+  const [diplomaUri, setDiplomaUri] = useState(null); // Armazena o URI do arquivo PDF selecionado
   const [senha, setSenha] = useState('');
-  const [confirmaSenha, setConfirmaSenha] = useState('');
+  const [confirmaSenha, setConfirmaSenha] =useState("");
+
+
 
   const handleCadastro = () => {
-    if (!nomeCompleto || !idade || !cpfRg || !telefone || !email || !senha || !confirmaSenha) {
+    if (!nomeCompleto || !idade || !cpfRg || !telefone || !email || !crm || !numeroCoren || !validadeCoren || !diplomaUri || !senha) {
       Alert.alert('Erro', 'Por favor, preencha todos os campos.');
       return;
     }
@@ -28,7 +33,7 @@ const ClienteScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cadastro</Text>
+      <Text style={styles.title}>Cadastro de Enfermeiros</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome Completo"
@@ -56,6 +61,29 @@ const ClienteScreen = () => {
         onChangeText={setTelefone}
         keyboardType="phone-pad"
       />
+       <TextInput
+        style={styles.input}
+        placeholder="CRM"
+        value={crm}
+        onChangeText={setCrm}
+        keyboardType="phone-pad"
+      />
+           <TextInput
+        style={styles.input}
+        placeholder="Numero do COREN"
+        value={numeroCoren}
+        onChangeText={setNumeroCoren}
+        keyboardType="numeric"
+        />
+        <TextInput
+        style ={styles.input}
+        placeholder='Validade do COREN'
+        value ={validadeCoren}
+        onChangeText={setValidadeCoren}
+        keyboardType='date'
+        />
+        <Picker.Item label ="Adicione seu Diploma" value ="Diploma"  />
+      
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -77,6 +105,7 @@ const ClienteScreen = () => {
         onChangeText={setConfirmaSenha}
         secureTextEntry
       />
+  
       <Button title="Cadastrar" onPress={handleCadastro} />
     </View>
   );
@@ -102,4 +131,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { ClienteScreen };
+export  {EnfermeiroScreen};

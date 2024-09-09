@@ -5,6 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeStack } from './Home/HomeStack';
 import { ProfileStack } from './Profile/ProfileStack';
 import { AdvertStack } from './Adverts/AdvertStack';
+import { ContactStack } from './Contact/ContactStack';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +39,10 @@ export function HomeNavigation()
                                 case 'PerfilStack':
                                     icon('person', 'person-outline');
                                     break;
+                                case 'ContactStack':
+                                     icon('call', 'call-outline');
+                                     break;
+                               
                                 default:
                                     break;
                             }
@@ -51,6 +57,7 @@ export function HomeNavigation()
                 <Tab.Screen name="HomeStack" component={ HomeStack } options={{title: 'Home'}} />
                 <Tab.Screen name="AnunciosStack" component={ AdvertStack } options={{title: 'Anúncios'}} />
                 <Tab.Screen name="PerfilStack" component={ ProfileStack } options={{title: 'Perfil'}} />
+                <Tab.Screen name="ContactStack" component={ContactStack} options={{ title: 'Contato' }} />
             </Tab.Navigator>
         
     );

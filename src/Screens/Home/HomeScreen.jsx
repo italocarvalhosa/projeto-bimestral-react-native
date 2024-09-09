@@ -7,6 +7,7 @@ import { InputSearch } from './InputSearch';
 import { HomeService } from './HomeService/HomeServices';
 import { TitleGuide } from './HomeGuide/TitleGuide';
 import { HomeGuide } from './HomeGuide/HomeGuide';
+import { ButtonNavigate } from '../components/ButtonNavigate';
 
 
 export const HomeScreen = () => {
@@ -18,7 +19,6 @@ export const HomeScreen = () => {
             <LinearGradient style={styles.background}
                 colors={linear}
             >
-
                 <HomeHeader />
                 <InputSearch />
                 <HomeService />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, TextInput, StyleSheet } from 'react-native';
-const icon = '../../../../assets/img/search.png';
+const icon = '../../../assets/img/search.png';
 
 const styles = StyleSheet.create({
     divInput: {
